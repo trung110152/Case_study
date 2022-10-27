@@ -17,7 +17,56 @@ function showList() {
         " </tr>";
     for (let i = 0; i < hoten.length; i++) {
         j++;
-        table += "<tr class='a'>" +
+        table += "<tr >" +
+            "<td>" + j + "</td>" +
+            "<td>" + hoten[i] + "</td>" +
+            "<td>" + ngaysinh[i] + "</td>" +
+            "<td>" + gioitinh[i] + "</td>" +
+            "<td>" + diachi[i] + "</td>" +
+            "<td>" + sodt[i] + "</td>" +
+            "<td><button onclick ='edit(" + i + ")'>Thay đổi</button></td>" +
+            "<td><button onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
+    }
+    document.getElementById("liststudent").innerHTML = table;
+}
+showList()
+
+function showListSearch(index) {
+    let j = 0;
+    let table = " <tr>" +
+        " <td>STT</td>" +
+        " <td>Họ và tên</td>" +
+        " <td>Ngày sinh</td>" +
+        " <td>Giới tính</td>" +
+        " <td>Địa chỉ</td>" +
+        " <td>Liên lac</td>" +
+        " <td colspan='2'>Ghi chú</td>" +
+        " </tr>";
+    for (let i = 0; i < index; i++) {
+        j++;
+        table += "<tr >" +
+            "<td>" + j + "</td>" +
+            "<td>" + hoten[i] + "</td>" +
+            "<td>" + ngaysinh[i] + "</td>" +
+            "<td>" + gioitinh[i] + "</td>" +
+            "<td>" + diachi[i] + "</td>" +
+            "<td>" + sodt[i] + "</td>" +
+            "<td><button onclick ='edit(" + i + ")'>Thay đổi</button></td>" +
+            "<td><button onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
+    }
+    j++;
+    table += "<tr style='background-color: white'>" +
+        "<td>" + j + "</td>" +
+        "<td>" + hoten[index] + "</td>" +
+        "<td>" + ngaysinh[index] + "</td>" +
+        "<td>" + gioitinh[index] + "</td>" +
+        "<td>" + diachi[index] + "</td>" +
+        "<td>" + sodt[index] + "</td>" +
+        "<td><button onclick ='edit(" + index + ")'>Thay đổi</button></td>" +
+        "<td><button onclick ='dxoa(" + index + ")'>Xóa bỏ</button></td>" + "</tr>";
+    for (let i = index+1; i < hoten.length; i++) {
+        j++;
+        table += "<tr>" +
             "<td>" + j + "</td>" +
             "<td>" + hoten[i] + "</td>" +
             "<td>" + ngaysinh[i] + "</td>" +
@@ -30,7 +79,6 @@ function showList() {
     document.getElementById("liststudent").innerHTML = table;
 }
 
-showList()
 
 function add() {
     let fullname = document.getElementById("fullname").value;
@@ -43,8 +91,14 @@ function add() {
     gioitinh.push(gender);
     diachi.push(dress);
     sodt.push(phonenumber);
-    showList()
+    showListSearch(hoten.length -1);
+    document.getElementById("fullname").value= '';
+    document.getElementById("birthday").value= '';
+    document.getElementById("gender").value= '';
+    document.getElementById("dress").value= '';
+    document.getElementById("phonenumber").value= '';
 }
+
 
 function dxoa(i) {
     hoten.splice(i, 1)
@@ -75,33 +129,11 @@ function save(i) {
 
 function search() {
     let word = document.getElementById("student_name").value;
-    for (let i = 0; i < hoten.length; i++) {
-        if (word === hoten[i]) {
-            return kq(i);
+    for (let x = 0; x < hoten.length; x++) {
+        if (word === hoten[x]) {
+            showListSearch(x);
+            break;
         }
     }
-    alert('Không tìm thấy: ' + word);
-}
-
-function kq(i) {
-    let ketqua = "<table border='1'><tr>" +
-        " <td>Họ và tên</td>" +
-        " <td>Ngày sinh</td>" +
-        " <td>Giới tính</td>" +
-        " <td>Địa chỉ</td>" +
-        " <td>Liên lac</td>" +
-        " <td>Ghi chú</td>\n" +
-        " </tr><tr>" +
-        "<td>" + hoten[i] + "</td>" +
-        "<td>" + ngaysinh[i] + "</td>" +
-        "<td>" + gioitinh[i] + "</td>" +
-        "<td>" + diachi[i] + "</td>" +
-        "<td>" + sodt[i] + "</td>" +
-        "<td><button onclick='done()'>Xong</td>" +
-        "</tr></table>";
-    document.getElementById("result").innerHTML = ketqua;
-}
-
-function done() {
-    document.getElementById("result").innerHTML = "";
+    // alert('Không tìm thấy: ' + word);
 }
