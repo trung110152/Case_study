@@ -4,32 +4,36 @@
   <meta charset="UTF-8">
   <title>Product Manager</title>
   <link rel="stylesheet" href="quan_ly.css">
-  <script src="quan_ly.js"></script>
 </head>
 <body>
-<div>
-<h1>Lớp C 09</h1>
-<h3>*Thông tin học viên</h3>
-<input type="text" id="student_name" placeholder="Nhập tên học viên ">
-<button onclick="search()">Tìm kiếm</button>
-<br>
-<h3>*Nhập thông tin học viên mới</h3>
-<input type="text" id="fullname"    placeholder="Họ và tên ">
-<input type="text" id="birthday"    placeholder="Ngày sinh">
-<input type="text" id="gender"      placeholder="Giới tính">
-<input type="text" id="dress"       placeholder="Địa chỉ">
-<input type="text" id="phonenumber" placeholder="Số đt">
-<button onclick="add()">Thêm mới</button>
-<h3>*Danh sách lớp</h3>
+<div><img src="./Code_gym.png" alt=""></div>
+<div id="div2">
+  <h1>Lớp C09</h1>
+  <h3>*Thông tin học viên</h3>
+  <input type="text" id="student_name" placeholder="Nhập tên học viên ">
+  <button onclick="search()">Tìm kiếm</button>
 </div>
 
-<table id="liststudent" border="1">
-</table>
+<div id="result"></div>
 
 <div>
-  <table id="edit">
-  </table>
+  <br>
+  <h3>*Nhập thông tin học viên mới</h3>
+  <input type="text" id="fullname" placeholder="Họ và tên ">
+  <input type="text" id="birthday" placeholder="Ngày sinh">
+  <input type="text" id="gender" placeholder="Giới tính">
+  <input type="text" id="dress" placeholder="Địa chỉ">
+  <input type="text" id="phonenumber" placeholder="Số đt">
+  <button onclick="add()">Thêm mới</button>
+  <h3>*Danh sách lớp</h3>
 </div>
-</body>
+
+<table id="liststudent" border="1"></table>
+
+<div>
+  <table id="edit" border="1"></table>
+</div>
 </body>
 </html>
+<script src="quan_ly.js"></script>
+<link rel="stylesheet" href="quan_ly.css">

@@ -1,14 +1,41 @@
 button {
-    background-color: lightgreen;
-    border: none;
+    background-color: cyan;
 }
+
  body {
+     width: 100%;
+     height: auto;
      background-color: thistle;
-    text-align: center;
-}
- liststudent {
      text-align: center;
- }
-edit {
-    text-align: center;
+    margin: 10px;
+
 }
+
+img {
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+
+#div2{
+    padding-right: 220px;
+}
+
+#result{
+    border: 1px;
+    margin-left: 450px;
+    width: 1200px;
+}
+
+#liststudent{
+    border: 1px;
+    margin-left: 150px;
+    width: 1220px;
+}
+
+#edit{
+    border: 1px;
+    margin-left: 150px;
+    width: 1220px;
+}
+
