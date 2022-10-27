@@ -1,0 +1,14 @@
+button {
+    background-color: lightgreen;
+    border: none;
+}
+ body {
+     background-color: thistle;
+    text-align: center;
+}
+ liststudent {
+     text-align: center;
+ }
+edit {
+    text-align: center;
+}
