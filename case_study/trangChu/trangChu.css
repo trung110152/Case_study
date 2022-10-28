@@ -1,0 +1,60 @@
+#overview {
+    width: 100%;
+    height: 1200px;
+}
+
+#top {
+    width: 84%;
+    height: 150px;
+    background-color: rgb(216, 191, 216);
+    float: right;
+    text-align: center;
+}
+
+#brand {
+    font-size: 45px;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+}
+
+#logo {
+    margin-top: -20px;
+}
+
+
+#left {
+    width: 16%;
+    height: 1200px;
+    float: left;
+    background-color: rgb(213, 191, 216);
+}
+
+#content {
+    width: 84%;
+    height: 1050px;
+    text-align: left;
+    float: right;
+    background-color: rgba(176, 208, 222, 0.87);
+}
+#content1 {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#menu {
+    padding-top: 30px;
+}
+
+ul#menu li a {
+    text-decoration: none;
+}
+
+ul li {
+    font-size: 30px;
+    padding: 20px;
+}
+
+button {
+    background-color: rgb(213, 191, 216);
+}

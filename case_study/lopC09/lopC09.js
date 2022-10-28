@@ -6,7 +6,7 @@ let sodt = ["0981641139",'0987654321','0987654312','0987654123','0987651234']
 
 function showList() {
     let j = 0;
-    let table = " <tr>" +
+    let table = " <tr id='tr1'>" +
         " <td>STT</td>" +
         " <td>Họ và tên</td>" +
         " <td>Ngày sinh</td>" +
@@ -33,7 +33,7 @@ showList()
 
 function showListSearch(index) {
     let j = 0;
-    let table = " <tr>" +
+    let table = " <tr id='tr1'>" +
         " <td>STT</td>" +
         " <td>Họ và tên</td>" +
         " <td>Ngày sinh</td>" +
@@ -55,7 +55,7 @@ function showListSearch(index) {
             "<td><button id='button1' onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
     }
     j++;
-    table += "<tr style='background-color: white'>" +
+    table += "<tr style='background-color: deepskyblue'>" +
         "<td>" + j + "</td>" +
         "<td>" + hoten[index] + "</td>" +
         "<td>" + ngaysinh[index] + "</td>" +
@@ -132,8 +132,8 @@ function search() {
     for (let x = 0; x < hoten.length; x++) {
         if (word === hoten[x]) {
             showListSearch(x);
-            break;
+            return
         }
     }
-    // alert('Không tìm thấy: ' + word);
+    alert('Không tìm thấy: ' + word);
 }

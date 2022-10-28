@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hii</title>
+    <link rel="stylesheet" href="lopC09.css">
+</head>
+<body>
+<div id="overview">
+    <div id="top">
+        <div id="brand"><p>CodeGymVN - Thanh Xuân</p></div>
+    </div>
+    <div id="left">
+        <div id="logo">
+            <a href=""><img src="../img/Code_gym.png" width="240px" height="200px" style="margin-top: 20px;"></a>
+        </div>
+        <ul id="menu">
+            <li><a href="../trangChu/trangChu.html" title="Trang chu"> Trang chủ</a></li>
+            <li><a href="../lopC09/lopC09.html">Lớp C09</a></li>
+        </ul>
+    </div>
+    <div id="content">
+
+        <h2>Lớp C09</h2>
+        <h3>*Nhập thông tin học viên mới</h3>
+        <input type="text" id="fullname" placeholder="Họ và tên ">
+        <input type="text" id="birthday" placeholder="Ngày sinh">
+        <input type="text" id="gender" placeholder="Giới tính">
+        <input type="text" id="dress" placeholder="Địa chỉ">
+        <input type="text" id="phonenumber" placeholder="Số đt">
+        <button onclick="add()">Thêm mới</button>
+        <h3>*Tìm học viên</h3>
+        <input type="text" id="student_name" placeholder="Tên học viên ">
+        <button onclick="search()">Tìm kiếm</button>
+        <br>
+        <h4>Danh sách lớp C09-2022</h4>
+        <table id="liststudent" border="1"></table>
+        <table id="edit" border="1"></table>
+    </div>
+    <div id="last"></div>
+</div>
+<script src="lopC09.js"></script>
+</body>
+</html>
