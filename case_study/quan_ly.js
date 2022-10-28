@@ -25,7 +25,7 @@ function showList() {
             "<td>" + diachi[i] + "</td>" +
             "<td>" + sodt[i] + "</td>" +
             "<td><button onclick ='edit(" + i + ")'>Thay đổi</button></td>" +
-            "<td><button onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
+            "<td><button id='button1' onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
     }
     document.getElementById("liststudent").innerHTML = table;
 }
@@ -52,7 +52,7 @@ function showListSearch(index) {
             "<td>" + diachi[i] + "</td>" +
             "<td>" + sodt[i] + "</td>" +
             "<td><button onclick ='edit(" + i + ")'>Thay đổi</button></td>" +
-            "<td><button onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
+            "<td><button id='button1' onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
     }
     j++;
     table += "<tr style='background-color: white'>" +
@@ -63,7 +63,7 @@ function showListSearch(index) {
         "<td>" + diachi[index] + "</td>" +
         "<td>" + sodt[index] + "</td>" +
         "<td><button onclick ='edit(" + index + ")'>Thay đổi</button></td>" +
-        "<td><button onclick ='dxoa(" + index + ")'>Xóa bỏ</button></td>" + "</tr>";
+        "<td><button id='button1' onclick ='dxoa(" + index + ")'>Xóa bỏ</button></td>" + "</tr>";
     for (let i = index+1; i < hoten.length; i++) {
         j++;
         table += "<tr>" +
@@ -74,7 +74,7 @@ function showListSearch(index) {
             "<td>" + diachi[i] + "</td>" +
             "<td>" + sodt[i] + "</td>" +
             "<td><button onclick ='edit(" + i + ")'>Thay đổi</button></td>" +
-            "<td><button onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
+            "<td><button id='button1' onclick ='dxoa(" + i + ")'>Xóa bỏ</button></td>" + "</tr>";
     }
     document.getElementById("liststudent").innerHTML = table;
 }
