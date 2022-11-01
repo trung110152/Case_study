@@ -1,6 +1,6 @@
 #overview {
     width: 100%;
-    height: 1200px;
+    height: 1000px;
 }
 
 #top {
@@ -24,17 +24,17 @@
 
 #left {
     width: 16%;
-    height: 1200px;
+    height: 1000px;
     float: left;
     background-color: rgb(213, 191, 216);
 }
 
 #content {
     width: 84%;
-    height: 1050px;
+    height: 850px;
     text-align: left;
     float: right;
-    background-color: rgba(176, 208, 222, 0.87);
+    background-color: rgba(176, 208, 222, 0.71);
 }
 #content1 {
     margin-top: 100px;
@@ -57,4 +57,11 @@ ul li {
 
 button {
     background-color: rgb(213, 191, 216);
+}
+
+#last {
+    background-color: cornflowerblue;
+    color: white;
+    clear:both;
+    padding: 50px;
 }

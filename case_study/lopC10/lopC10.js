@@ -1,8 +1,8 @@
-let hoten = ['Cao Văn Trung','Nguyễn Ngọc Kiên','Trần Văn Trì','Hoàng Anh Lỗ','Lê Trọng Lực'];
-let ngaysinh = ['25/01/1996','01/01/1997','12/06/1998','12/12/1999','02/05/2000'];
-let gioitinh = ['Nam','Nam','Nam','Nam','Nam'];
-let diachi = ['Hải Dương','Thanh Hóa','Hà Nội','Tp Hồ Chí Minh','Bình Dương'];
-let sodt = ["0981641139",'0987654321','0987654312','0987654123','0987651234']
+let hoten = [];
+let ngaysinh = [];
+let gioitinh = [];
+let diachi = [];
+let sodt = [];
 
 function showList() {
     let j = 0;
@@ -135,5 +135,5 @@ function search() {
             return
         }
     }
-   console.log("Không %ctìm %cthấy: " + word,"color: red;","color: blue;" );
+    console.log("Không %ctìm %cthấy: " + word,"color: red;","color: blue;" );
 }
